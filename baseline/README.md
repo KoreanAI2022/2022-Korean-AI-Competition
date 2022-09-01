@@ -5,7 +5,7 @@
 
 `TRACK1-1 - 명령어` : `t1-cmd-final`  
 `TRACK1-2 - 자유대화` : `t1-free-final`  
-`TRACK1-3 - 자유대화` : `t1-dial-final`  
+`TRACK1-3 - 방언발화` : `t1-dial-final`  
 `TRACK2-1 - 차량 내 대화 및 명령어` : `t2-car-final`  
 `TRACK2-2 - 주요 영역별 회의 음성` : `t2-conf-final`  
   
