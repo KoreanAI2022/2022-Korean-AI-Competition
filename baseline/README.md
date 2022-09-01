@@ -26,6 +26,11 @@
     - columns - `["filename", "text"]`
     - `filename` - train_data 폴더에 존재하는 파일명 (ex. idx000000)
     - `text` - train_data 폴더에 존재하는 파일의 음성 전사 Text 정보 (ex. 인공지능 훈민정음에 꽃 피우다)
+    
+### 참고사항
+- 평가에 사용되는 데이터는 **철자 전사**를 따르고 있습니다.
+
+
 
 ### 예선과 달라진점
 - **공통**
@@ -51,6 +56,7 @@
    -  정당명     :   `&party-name&`  
    
  >  자세한 정보는 [AI-HUB](https://www.aihub.or.kr/)의 해당 데이터에 대한 **구축 가이드 및 데이터 설명서**를 참고하실 수 있습니다.
+
 
 
 # Baseline code
