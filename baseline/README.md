@@ -1,9 +1,13 @@
 # Dataset
+## 본선 데이터셋
+
 ### Dataset Name
-`TRACK1 - 자유대화` : `t1-free`  
-`TRACK1 - 명령어` : `t1-cmd`  
-`TRACK2 - 차량 내 대화 및 명령어` : `t2-car`  
-`TRACK2 - 주요 영역별 회의 음성` : `t2-conf`  
+
+`TRACK1-1 - 명령어` : `t1-cmd-final`  
+`TRACK1-2 - 자유대화` : `t1-free-final`  
+`TRACK1-3 - 자유대화` : `t1-dial-final`  
+`TRACK2-1 - 차량 내 대화 및 명령어` : `t2-car-final`  
+`TRACK2-2 - 주요 영역별 회의 음성` : `t2-conf-final`  
   
 `rootpath = nsml.DATSET_PATH`
 ### Train Dataset
@@ -22,6 +26,31 @@
     - columns - `["filename", "text"]`
     - `filename` - train_data 폴더에 존재하는 파일명 (ex. idx000000)
     - `text` - train_data 폴더에 존재하는 파일의 음성 전사 Text 정보 (ex. 인공지능 훈민정음에 꽃 피우다)
+
+### 예선과 달라진점
+- **공통**
+  - 학습/평가 데이터 수량 증가(약 50% 증가)  
+  - 데이터셋 이름 변경
+
+- **TRACK 1. 한국어 음성인식**
+  - 방언 발화 데이터 추가(강원도, 충청도 방언)  
+
+- **TRACK 2. 차량 내 대화 및 명령어 인식**
+  - 차량 주행 소음 추가(60dB)  
+  
+- **TRACK 2. 주요 영역별 회의 음성 인식**
+  - 인명, 상호명 등 비식별화 데이터 추가 
+
+* 원천데이터에 포함된 개인정보는 라벨링시 익명처리 등 비식별화를 위해 아래와 같이 마스킹 처리되었습니다.   
+   -  이름    :  `&name&  `  
+   -  상호명    :    `&company-name&`  
+   -  주민등록번호   :  `&social-security-num&`   
+   -  카드번호     :   `&card-num&`  
+   -  주소     :   `&address&`  
+   -  전화번호    :    `&tel-num&`  
+   -  정당명     :   `&party-name&`  
+   
+ >  자세한 정보는 [AI-HUB](https://www.aihub.or.kr/)의 해당 데이터에 대한 **구축 가이드 및 데이터 설명서**를 참고하실 수 있습니다.
 
 
 # Baseline code
